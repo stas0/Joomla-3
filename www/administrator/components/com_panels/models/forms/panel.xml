@@ -1,0 +1,44 @@
+<form>
+	<fieldset>
+		<field
+			name="id"
+			type="hidden"
+			/>
+		<field
+			name="name"
+			type="text"
+			label="Panel name"
+			size="40"
+			class="inputbox"
+			default=""
+			/>
+		<field
+				name="image"
+				type="media"
+				label="Image"
+				description="Default panel image"
+		/>
+		<field
+			name="price"
+			type="number"
+			label="Price"
+			description="Price per square meter"
+		/>
+		<field
+				name="publish"
+				type="radio"
+				default="0"
+				label="Publish"
+				class="btn-group btn-group-yesno"
+		>
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field
+			name="ordering"
+			type="text"
+			label="Ordering"
+			default="0"
+			/>
+	</fieldset>
+</form>

@@ -1,0 +1,100 @@
+<form>
+	<fieldset
+		addfieldpath="/administrator/components/com_productfilter/models/fields/"
+		>
+		<field
+			name="id"
+			type="hidden"
+			/>
+		<field
+			name="product_title"
+			type="text"
+			label="Product title"
+			size="40"
+			class="inputbox"
+			default=""
+			/>
+		<field
+			name="product_filter"
+			type="filters"
+			label="Product filter"
+			multiple="true"
+			/>
+		<field
+			name="product_categorie"
+			type="sql"
+			label="Select product category"
+			query="SELECT id, categorie_title FROM #__productfilter_product_categories"
+			key_field="id"
+			value_field="categorie_title"
+		/>
+		<field
+			name="product_img"
+			type="media"
+			label="Product image"
+			/>
+		<field
+			name="product_desc"
+			type="textarea"
+			label="Product description"
+			rows="10"
+			cols="5"
+		/>
+		<field
+			name="product_price"
+			type="text"
+			label="Product price"
+		/>
+		<field
+			name="product_desc_1"
+			type="textarea"
+			label="Product description 1 name"
+		/>
+		<field
+			name="product_desc_1_val"
+			type="textarea"
+			label="Product description 1 value"
+		/>
+		<field
+			name="product_desc_2"
+			type="textarea"
+			label="Product description 2 name"
+		/>
+		<field
+			name="product_desc_2_val"
+			type="textarea"
+			label="Product description 2 value"
+		/>
+		<field
+			name="product_desc_3"
+			type="textarea"
+			label="Product description 3 name"
+		/>
+		<field
+			name="product_desc_3_val"
+			type="textarea"
+			label="Product description 3 value"
+		/>
+		<field
+			name="product_desc_4"
+			type="textarea"
+			label="Product description 4 name"
+		/>
+		<field
+			name="product_desc_4_val"
+			type="textarea"
+			label="Product description 4 value"
+		/>
+		<field
+			name="product_menu_item"
+			type="menuitem"
+			label="Product menu item"
+			/>
+		<field
+			name="ordering"
+			type="text"
+			label="Ordering"
+			default="0"
+			/>
+	</fieldset>
+</form>

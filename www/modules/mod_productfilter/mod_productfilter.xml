@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3" client="site" method="upgrade">
+	<name>MOD_NAME</name>
+	<authorUrl>MOD_AUTHOR_URL</authorUrl>
+	<version>1.0</version>
+	<description>MOD_DESC</description>
+
+	<files>
+
+		<filename module="mod_productfilter">mod_productfilter.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_productfilter.xml</filename>
+		<folder>assets</folder>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+		<folder>models</folder>
+		<folder>tables</folder>
+	</files>
+
+	<languages folder="language">
+
+		<language tag="en-GB">en-GB/en-GB.mod_productfilter.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_productfilter.sys.ini</language>
+		
+	</languages>
+
+	<config>
+		<fields name="params">
+
+			<fieldset name="SETTINGS">
+				<field
+					name="layoutType"
+					label="MOD_LAYOUT_TYPE"
+					type="list"
+					default="default"
+				>
+					<option value="default">Default</option>
+				</field>
+				<field
+					name="product_categorie"
+					type="sql"
+					label="Select an article"
+					query="SELECT id, categorie_title FROM #__productfilter_product_categories"
+					key_field="id"
+					value_field="categorie_title"
+				/>
+			</fieldset>
+			
+		</fields>
+		
+	</config>
+	
+</extension>

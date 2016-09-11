@@ -1,0 +1,15 @@
+{
+  "name": "www",
+  "version": "1.0.0",
+  "description": "1- What is this? \t* This is a Joomla! installation/upgrade package to version 3.x \t* Joomla! Official site: http://www.joomla.org \t* Joomla! 3.4 version history - https://docs.joomla.org/Joomla_3.4_version_history \t* Detailed changes in the Changelog: https://github.com/joomla/joomla-cms/commits/master",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp-sass": "^2.3.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

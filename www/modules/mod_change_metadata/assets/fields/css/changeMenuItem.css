@@ -1,0 +1,81 @@
+.changeMenuItem{
+	display: table;
+}
+
+.changeMenuItem_column{
+	border-radius: 1px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 1em 0px;
+    vertical-align: top;
+    min-height: 4.071em;
+    min-width: 8em;
+}
+
+.changeMenuItem_sourceColumn{
+	vertical-align: middle;
+}
+
+.changeMenuItem_drag{
+	vertical-align: middle;
+	padding: 1em;
+	min-width: auto;
+    border: none;
+}
+
+.changeMenuItem_drag > div{
+	display: block;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 1px;
+    border: 1px solid #ccc;
+    background-color: rgba(221,221,221,0.60);
+    padding: 2px 7px;
+    cursor: pointer;
+}
+
+.changeMenuItem_drag > div:focus{
+	background-color: rgba(221,221,221,0.85);
+}
+
+.changeMenuItem_drag > div:first-child{
+	margin-bottom: 3px;
+}
+
+.changeMenuItem_drag button:first-child{
+	margin-bottom: 5px;
+}
+
+.changeMenuItem_menu{
+	font-size: 15px;
+	cursor: default;
+}
+
+.changeMenuItem_menu > div{
+	padding: 0px 1em;
+}
+
+.changeMenuItem_menu > div:first-child{
+	font-weight: 600;
+}
+
+.changeMenuItem_menu > div:not(:first-child){
+	padding-left: 2em;
+	cursor: pointer;
+}
+
+.changeMenuItem_menu > div:not(:first-child):hover{
+	background-color: rgba(204,204,204,0.35);
+}
+
+.changeMenuItem_selectedItem{
+	background-color: rgba(204,204,204,0.35);
+}
+
+.changeMenuItem_selectedColumn{
+	height: 100%;
+}
+
+.changeMenuItem_data input{
+	display: block !important;
+}

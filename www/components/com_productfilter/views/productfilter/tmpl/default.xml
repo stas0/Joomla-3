@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<layout title="COM_PRODUCTFILTER_PRODUCTFILTER_VIEW_DEFAULT_TITLE">
+			<message>COM_PRODUCTFILTER_PRODUCTFILTER_VIEW_DEFAULT_DESC</message>
+	</layout>
+	<fields name="request">
+		<fieldset
+			name="request"
+			addfieldpath="/administrator/components/com_productfilter/models/fields"
+			>
+			<field
+				name="textSize"
+				type="productfilter"
+				label="COM_PRODUCTFILTER_PRODUCTFILTER_FIELD_TEXT_SIZE_LABEL"
+				>
+			</field>
+		</fieldset>
+	</fields>
+</metadata>

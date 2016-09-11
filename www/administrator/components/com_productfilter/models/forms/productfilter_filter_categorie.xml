@@ -1,0 +1,19 @@
+<form>
+	<fieldset>
+		<field
+			name="id"
+			type="hidden"
+			/>
+		<field
+			name="categorie_title"
+			label="Filter categorie title"
+			type="text"
+			/>
+		<field
+			name="ordering"
+			type="text"
+			label="Ordering"
+			default="0"
+			/>
+	</fieldset>
+</form>

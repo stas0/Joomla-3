@@ -1,0 +1,8 @@
+.form-horizontal .controls{
+	margin-left: 20em !important;
+}
+
+.bairo_invalidField{
+	border: 1px solid #C3251D !important;
+    box-shadow: 0px 0px 1px #C3251D !important;
+}

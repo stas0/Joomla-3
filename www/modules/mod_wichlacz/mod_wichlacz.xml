@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3" client="site" method="upgrade">
+	<name>Wichlacz_module</name>
+	<authorUrl>https://vk.com/id152661824</authorUrl>
+	<version>1.0</version>
+	<description>Wichlacz module</description>
+
+	<files>
+
+		<filename module="mod_wichlacz">mod_wichlacz.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_wichlacz.xml</filename>
+		<folder>assets</folder>
+		<folder>fields</folder>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+		<folder>lib</folder>
+	</files>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_wichlacz.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_wichlacz.sys.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.mod_wichlacz.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.mod_wichlacz.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+
+			<fieldset name="SETTINGS"
+				addfieldpath="/modules/mod_wichlacz/fields/"
+			>
+				<field
+					name="layoutType"
+					label="MOD_LAYOUT_TYPE"
+					type="list"
+					default="default"
+				>
+					<option value="default">Default</option>
+					<option value="filter">Filter</option>
+					<option value="filter_result">Filter result</option>
+				</field>
+				<field
+					name="menuItem"
+					type="menuitem"
+					label="Пункт меню"
+					description="Пункт меню"
+				/>
+				<field
+					name="mailRecipient"
+					label="Email recipient"
+					type="text"
+				/>
+				<field
+					name="mailSender"
+					label="Email sender"
+					type="text"
+				/>
+				<field 
+					name="accordionField"
+					type="listContent"
+					label="Фильтр"
+				/>
+			</fieldset>
+			
+		</fields>
+		
+	</config>
+	
+</extension>

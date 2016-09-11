@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?><!-- версия xml и кодировка в которой устанавливаем-->
+<!--Для какой версии joomla устанавливаем-->
+<extension type="component" version="3.0" method="upgrade">
+<!-- Название компонента -->
+<name>Mycomponents</name> 
+<!-- Элементы ниже необязательны и их значения могут быть введены в произвольном формате -->
+<creationDate>2012.11.05</creationDate> <!-- Дата создания -->
+<author>Ваня</author> <!-- Автор -->
+<authorEmail>joomla.umnik@gmail.com</authorEmail> <!-- Почта -->
+<authorUrl>http://joomla-umnik.ru</authorUrl> <!-- Сайт разработчика -->
+<copyright>Copyright (C) 2011 mycomponent</copyright> <!-- Копирайт -->
+<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license> <!-- Лицензия -->
+<!-- Строка версии записывается в таблицу компонентов -->
+<version>1.2</version>
+<!-- Поле description необязательно и по умолчанию равно значению поля name -->
+<description>
+Компонент для joomla. Мануал как создать компонент на joomla 3.х
+</description>
+
+<!-- Установка таблиц компонента -->
+<install> 
+<sql>
+<file driver="mysql" charset="utf8">sql/install.sql</file>
+</sql>
+</install>
+
+<!-- Файлы сайта -->
+<files folder="site">
+<filename>index.html</filename>
+<filename>mycomponents.php</filename>
+<filename>controller.php</filename>
+<folder>views</folder>
+<folder>models</folder>
+<folder>css</folder>
+</files>
+
+<!-- Языковой файл сайта -->
+<languages folder="site">
+<language tag="ru-RU">language/ru-RU/ru-RU.com_mycomponents.ini</language>
+<language tag="ru-RU">language/ru-RU/ru-RU.com_mycomponents.sys.ini</language>
+</languages>
+
+<!-- Медиа файл логотип -->
+<media destination="com_mycomponent" folder="media">
+<filename>index.html</filename>
+<folder>images</folder>
+</media>
+
+<!-- Файлы административной части -->
+<administration>
+<menu>COM_MYCOMPONENT_RAZDEL</menu>
+
+<files folder="admin">
+<filename>index.html</filename>
+<filename>mycomponents.php</filename>
+<filename>controller.php</filename>
+<!-- У нас в административной части есть папка sql 
+что бы установить всё её содержимое мы заключаем её в тег <folder>sql</folder> 
+так же устанавливаются и другие любые папки скажем images css 
+это применяется как и для части сайта так и для админки-->
+<folder>sql</folder>
+<folder>tables</folder>
+<folder>models</folder>
+<folder>views</folder>
+<folder>controllers</folder>
+<folder>helpers</folder>
+</files>
+
+<!-- Языковой файл админки -->
+<languages folder="admin">
+<language tag="ru-RU">language/ru-RU/ru-RU.com_mycomponents.ini</language>
+<language tag="ru-RU">language/ru-RU/ru-RU.com_mycomponents.sys.ini</language>
+</languages>
+
+</administration>
+<!-- extension теперь он используется вместо instal -->
+</extension>

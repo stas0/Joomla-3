@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0" client="site" method="upgrade">
+	<name>Change menu item meta data</name>
+	<authorUrl>MOD_AUTHOR_URL</authorUrl>
+	<version>1.0</version>
+	<description>MOD_DESC</description>
+
+	<files>
+
+		<filename module="mod_change_metadata">mod_change_metadata.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_change_metadata.xml</filename>
+		<folder>assets</folder>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+		<folder>fields</folder>
+	</files>
+
+	<languages folder="language">
+
+		<language tag="en-GB">en-GB/en-GB.mod_.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_.sys.ini</language>
+		
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="SETTINGS"
+				addfieldpath="/modules/mod_change_metadata/fields/"
+			>
+				<field
+					name="layoutType"
+					label="MOD_LAYOUT_TYPE"
+					type="list"
+					default="default"
+				>
+					<option value="default">Default</option>
+				</field>
+				<field
+					name="mainSection"
+					type="changeMenuItem"
+					label="Для основных разделов"
+				/>
+				<field
+					name="subSection"
+					type="changeMenuItem"
+					label="Для основных разделов"
+				/>
+				<field
+					name="product_filter"
+					type="sql"
+					label="Product filter"
+					query="select id, filter_title from #__productfilter_filters"
+					key_field="id"
+					value_field="filter_title"
+					multiple="multiple"
+					/>
+			</fieldset>
+		</fields>
+		
+	</config>
+	
+</install>

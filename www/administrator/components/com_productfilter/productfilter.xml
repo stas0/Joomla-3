@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="component" version="3.0.0" method="upgrade">
+	<name>Product filter</name>
+	<author>MEG</author>
+	<version>0.0.1</version>
+
+	<update>
+		<shemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</shemas>
+	</update>
+
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>productfilter.php</filename>
+	</files>
+
+	<administration>
+		<menu link="index.php?option=com_productfilter">Product filter</menu>
+
+		<files folder="admin">
+			<filename>index.html</filename>
+			<filename>productfilter.php</filename>
+			<folder>sql</folder>
+		</files>
+	</administration>
+</extension>

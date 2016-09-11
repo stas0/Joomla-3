@@ -1,0 +1,75 @@
+#panels-module {
+    .mod_text {
+        padding-right: 5px;
+        color: black;
+        font-size: 16px;
+    }
+
+    .mod_sel {
+        height: 26px;
+    }
+
+    .mod_btn {
+        background-color: red;
+        border: 2px solid red;
+        color: white;
+        font-weight: bold;
+    }
+
+    .checkbox {
+        position: relative;
+        padding-left: 25px;
+        input[type=checkbox] {
+            display: none;
+        }
+        label:after {
+            content: '';
+            display: block;
+            height: 14px;
+            width: 14px;
+            outline: 1px solid gray;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        input[type=checkbox]:checked + label:after {
+            outline: 1px solid gray;
+            border: 2px solid #fff;
+            width: 14px;
+            height: 14px;
+            background-color: red;
+        }
+    }
+
+    a.price {
+        color: red;
+        font-size: 20px;
+        font-weight: bold;
+        text-decoration: none;
+        &:hover {
+            color: red;
+            text-decoration: none;
+        }
+    }
+
+    .save {
+        margin-left: 20px;
+        border: 2px solid red;
+        border-radius: 5px;
+        &:hover {
+            background-color: gray;
+        }
+    }
+
+        //  Bairo
+    input {
+        margin: 0px;
+        height: 100%;
+        border-radius: 0px;
+    }
+    
+    .listItem{
+        display: inline-block;
+        float: none;
+    }
+}

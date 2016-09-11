@@ -1,0 +1,52 @@
+<form>
+	<fieldset>
+		<field
+			name="id"
+			type="hidden"
+			/>
+		<field
+			name="panel"
+			type="sql"
+			query="SELECT id, name FROM `#__panels_panels`"
+			key_field="id"
+			value_field="name"
+			label="Parent panel"
+			description="Select parent panel"
+		></field>
+		<field
+			name="color"
+			type="text"
+			label="Color name"
+			size="40"
+			default=""
+			/>
+		<field
+			name="image"
+			type="media"
+			label="Image"
+			description="Default panel image"
+		/>
+		<field
+			name="price"
+			type="number"
+			label="Price"
+			description="Price per square meter"
+		/>
+		<field
+			name="publish"
+			type="radio"
+			default="0"
+			label="Publish"
+			class="btn-group btn-group-yesno"
+		>
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field
+			name="ordering"
+			type="text"
+			label="Ordering"
+			default="0"
+			/>
+	</fieldset>
+</form>

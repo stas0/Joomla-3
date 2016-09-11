@@ -1,0 +1,41 @@
+<form>
+	<fieldset
+		addfieldpath="/administrator/components/com_productfilter/models/fields/megList"
+		>
+		<field
+			name="id"
+			type="hidden"
+			/>
+		<field
+			name="filter_title"
+			type="text"
+			label="Filter title"
+			size="40"
+			class="inputbox"
+			default=""
+			/>
+		<field
+			name="filter_categorie"
+			type="sql"
+			label="Select an article"
+			query="SELECT id, categorie_title FROM #__productfilter_filter_categories"
+			key_field="id"
+			value_field="categorie_title"
+		/>
+		<field
+			name="related_filters"
+			type="megList"
+			label="Select an related filters"
+			query="SELECT id, filter_title FROM #__productfilter_filters"
+			key_field="id"
+			value_field="filter_title"
+			multiple="true"
+		/>
+		<field
+			name="ordering"
+			type="text"
+			label="Ordering"
+			default="0"
+			/>
+	</fieldset>
+</form>

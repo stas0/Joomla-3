@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="component" version="3.0.0" method="upgrade">
+	<name>Panels</name>
+	<author>MEG</author>
+	<version>0.0.1</version>
+
+	<install>
+		<sql>
+			<file driver="mysql" chartset="utf8">
+				sql/install.mysql.utf8.sql
+			</file>
+		</sql>
+	</install>
+
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>panels.php</filename>
+		<filename>controller.php</filename>
+		<folder>assets</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+	</files>
+
+	<administration>
+		<menu link="index.php?option=com_panels">Panels</menu>
+
+		<files folder="admin">
+			<filename>index.html</filename>
+			<filename>panels.php</filename>
+			<filename>controller.php</filename>
+			<folder>sql</folder>
+			<folder>models</folder>
+			<folder>views</folder>
+			<folder>helpers</folder>
+			<folder>tables</folder>
+			<folder>controllers</folder>
+		</files>
+	</administration>
+</extension>

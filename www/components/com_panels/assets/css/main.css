@@ -1,0 +1,79 @@
+a.filter{
+	color: gray;
+	font-size: 12px;
+}
+a.filter:hover{
+	color: red;
+	text-decoration: none;
+}
+a.position{
+	padding-left: 15px;
+	margin-right: 10px;
+	border: 1px solid #E0E0E0;
+	background-color: white;
+}
+a.position:hover{
+	background-color: red;
+}
+a.position_red{
+	padding-left: 15px;
+	margin-right: 10px;
+	border: 1px solid #E0E0E0;
+	background-color: red;
+}
+.field_name{
+	font-weight: bold;
+	color: gray;
+}
+.modul{
+	background-color: #F8F8F8;
+	border: 1px solid #E0E0E0;
+	border-radius: 15px;
+}
+ul.filter_ul{
+	padding-left: 0px;
+}
+ul.filter_ul > li{
+	list-style-type: none;
+}
+ul.filter_ul > li:hover{
+	color: red;
+}
+.click {
+    color: #FFFFFF;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: red;
+    padding: 5px;
+    border: 1px solid #700000;
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 20px 1px #700000;
+}
+.click:hover{
+	color: white;
+	background-color: gray;
+	text-decoration: none;
+}
+.filter_rez_img:hover{
+	opacity: 0.4;
+}
+.filter_rez_name{
+	color: gray;
+}
+.filter_rez_name:hover{
+	color: red;
+	text-decoration: none;
+}
+
+.selectedFilter a{
+	background: red;
+}
+
+.productDesc{
+	min-height: 4em;
+}
+
+.productPagination{
+	text-align: center;
+	clear: both;
+}

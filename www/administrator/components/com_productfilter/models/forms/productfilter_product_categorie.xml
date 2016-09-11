@@ -1,0 +1,30 @@
+<form>
+	<fieldset
+		addfieldpath="/administrator/components/com_productfilter/models/fields"
+		>
+		<field
+			name="id"
+			type="hidden"
+			/>
+		<field
+			name="categorie_title"
+			label="Filter categorie title"
+			type="text"
+			/>
+		<field
+			name="filter_categories"
+			type="meglist"
+			label="Select filter categories"
+			query="SELECT id, categorie_title FROM #__productfilter_filter_categories"
+			key_field="id"
+			value_field="categorie_title"
+			multiple="true"
+		/>
+		<field
+			name="ordering"
+			type="text"
+			label="Ordering"
+			default="0"
+			/>
+	</fieldset>
+</form>

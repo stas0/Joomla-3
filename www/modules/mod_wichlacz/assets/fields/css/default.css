@@ -1,0 +1,113 @@
+.bairroAccordionContent_Item{
+	display: flex;
+	margin: 8px 0px;
+	margin-left: 25px;
+}
+
+.bairroAccordionContent_ItemWrap{
+	margin-top: 10px;
+}
+
+.bairroAccordionContent_ItemWrap > div.bairroAccordionContent_toolbar{
+	margin-left: 25px;
+}
+
+.bairroAccordionContent_ItemWrap > div:nth-child(2){
+	display: flex;
+	margin-top: 10px;
+	background-color: rgba(249, 219, 135, 0.74);
+    padding: 4px 0px;
+}
+
+.bairroAccordionContent_ItemWrap > div:nth-child(3){
+	display: block;
+	margin-top: 10px;
+	margin-left: 25px;
+}
+
+.bairroAccordionContent_draDropHand{
+	display: inline-block;
+	width: 40px;
+    margin-right: 7px;
+	background-image: url(../images/drag-drop-hand.png);
+	background-repeat: no-repeat;
+	background-size: 15px;
+	background-position: center center;
+}
+
+.bairroAccordionContent_expandRoll_up{
+	display: flex;
+    align-items: center;
+    margin-right: 18px;
+}
+
+.bairroAccordionContent_expandRoll_up:hover{
+	cursor: pointer;
+}
+
+.bairroAccordionContent_expandRoll_up > a{
+	color: #3071a9;
+    text-decoration: none;
+    font-size: 21px;
+    font-family: monospace;
+}
+
+.bairroAccordionContent_expandRoll_up > a{
+	text-decoration: none !important;
+}
+
+.bairroAccordionContent_title{
+	display: inline-flex;
+    align-items: center;
+}
+
+.bairroAccordionContent_title > *{
+	display: inline-block;
+	margin: 0px;
+	margin-right: 4px;
+}
+
+.bairroAccordionContent_InnerItem{
+	display: flex;
+    background-color: #BDAB92;
+    padding: 4px 0px;
+	margin-top: 5px;
+}
+
+.bairroAccordionContent_Item > div.bairroAccordionContent_InnerItem{
+	margin-top: 5px;
+    margin-left: 26px;
+}
+
+.bairroAccordionContent_Item > div.bairroAccordionContent_InnerItem:nth-child(2){
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.deleteInnerItem{
+	background-image: url(../images/remove-cross.png);
+	background-repeat: no-repeat;
+	background-size: 15px;
+	background-position: center center;
+	width: 25px;
+	margin-left: auto;
+}
+
+.deleteInnerItem:hover{
+	cursor: pointer;
+}
+
+.bairroAccordionContent_field{
+	display: flex;
+	width: 100%;
+}
+
+.bairroAccordionContent_field > div{
+	display: inline-block;
+	margin-right: 12px;
+}
+
+.bairroAccordionContent_field > div > *{
+	display: inline-block;
+	margin: 0px;
+}
