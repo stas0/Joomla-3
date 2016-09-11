@@ -14,6 +14,7 @@ $doc->addScript(JURI::base(true) . '/modules/mod_panels/assets/js/main.js');
 $doc->addStyleSheet(JURI::base(true) . '/modules/mod_panels/assets/css/main.css');
 $doc->addStyleSheet(JURI::base(true) . '/modules/mod_panels/assets/lib/bootstrap/bootstrap.css');
 
+    //  Get panels data
 $defaultPanel = $panels->getPanel($paramsData['defaultPanel']);
 $panelList = $panels->getPanels();
 $panelStylesList = $panels->getPanelStyles($paramsData['defaultPanel']);
