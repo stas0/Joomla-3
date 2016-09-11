@@ -2,36 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f7fdefe-8ff9-4818-bf97-75bc9cdca3d2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/modules/mod_panels/assets/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/modules/mod_panels/assets/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/modules/mod_panels/assets/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/modules/mod_panels/assets/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/modules/mod_panels/assets/img/cassette.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/modules/mod_panels/assets/img/height.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/modules/mod_panels/assets/img/macrorib.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/modules/mod_panels/assets/img/microrib.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/modules/mod_panels/assets/img/midrib.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/modules/mod_panels/assets/img/ral1015.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/modules/mod_panels/assets/img/ral6009.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/modules/mod_panels/assets/img/ral7016.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/modules/mod_panels/assets/img/ral8017.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/modules/mod_panels/assets/img/ral9005.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/modules/mod_panels/assets/img/ral9016.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/modules/mod_panels/assets/img/rib.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/modules/mod_panels/assets/img/slick.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/modules/mod_panels/assets/img/toprib.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/modules/mod_panels/assets/img/vorota_sec.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/modules/mod_panels/assets/img/width.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scssLintPlugin.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/administrator/components/com_panels/api/models/config.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/administrator/components/com_panels/api/panels.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/modules/mod_panels/assets/css/main.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/modules/mod_panels/assets/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/modules/mod_panels/assets/lib/bootstrap/bootstrap-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/modules/mod_panels/assets/lib/bootstrap/bootstrap-theme.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/modules/mod_panels/assets/lib/bootstrap/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/modules/mod_panels/assets/lib/bootstrap/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/modules/mod_panels/mod_panels.php" afterPath="$PROJECT_DIR$/www/modules/mod_panels/mod_panels.php" />
     </list>
     <ignored path="joomla_3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -105,21 +76,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mod_panels.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mod_panels.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/modules/mod_panels/mod_panels.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="16" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="16" />
+            <state relative-caret-position="272">
+              <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="default.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/modules/mod_panels/tmpl/default.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="110" column="59" selection-start-line="110" selection-start-column="56" selection-end-line="110" selection-end-column="59" />
+            <state relative-caret-position="272">
+              <caret line="97" column="37" selection-start-line="97" selection-start-column="37" selection-end-line="97" selection-end-column="37" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -216,11 +187,11 @@
         <option value="$PROJECT_DIR$/www/modules/mod_panels/assets/lib/bootstrap/bootstrap.css" />
         <option value="$PROJECT_DIR$/www/administrator/components/com_productfilter/api/panels.php" />
         <option value="$PROJECT_DIR$/www/modules/mod_panels/mod_panels.xml" />
-        <option value="$PROJECT_DIR$/www/modules/mod_panels/mod_panels.php" />
         <option value="$PROJECT_DIR$/www/administrator/components/com_panels/api/models/config.php" />
         <option value="$PROJECT_DIR$/www/administrator/components/com_panels/api/panels.php" />
         <option value="$PROJECT_DIR$/www/modules/mod_panels/assets/css/main.scss" />
         <option value="$PROJECT_DIR$/www/modules/mod_panels/tmpl/default.php" />
+        <option value="$PROJECT_DIR$/www/modules/mod_panels/mod_panels.php" />
       </list>
     </option>
   </component>
@@ -859,12 +830,12 @@
       <workItem from="1473411670146" duration="8000" />
       <workItem from="1473620672013" duration="1325000" />
       <workItem from="1473622014964" duration="189000" />
-      <workItem from="1473622218151" duration="9810000" />
+      <workItem from="1473622218151" duration="10238000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24850000" />
+    <option name="totallyTimeSpent" value="25278000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="264" y="0" width="1604" height="1080" extended-state="0" />
@@ -1263,21 +1234,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/modules/mod_panels/mod_panels.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="16" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/modules/mod_panels/tmpl/default.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="110" column="59" selection-start-line="110" selection-start-column="56" selection-end-line="110" selection-end-column="59" />
+        <state relative-caret-position="272">
+          <caret line="97" column="37" selection-start-line="97" selection-start-column="37" selection-end-line="97" selection-end-column="37" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/modules/mod_panels/mod_panels.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
