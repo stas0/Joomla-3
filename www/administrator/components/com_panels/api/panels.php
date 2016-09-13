@@ -68,6 +68,7 @@
             $query = $db->getQuery(true);
             $query->select($config->getSelect());
             $query->from('#__panel_styles');
+            $query->where('panel = ' . $panelId);
 
             $db->setQuery($query);
 

@@ -5,7 +5,7 @@ defined('_JEXEC') or die;
 require_once dirname(__FILE__) . '/helper.php';
 require_once JPATH_ADMINISTRATOR . '/components/com_panels/api/panels.php';
 
-$paramsData = (array)HelperPanels::getParams($module->module);
+$paramsData = (array)modPanelsHelper::getParams($module->module);
 $panels = new Panels();
 
 $doc = JFactory::getDocument();

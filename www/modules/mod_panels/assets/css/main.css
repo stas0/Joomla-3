@@ -57,3 +57,7 @@
 #panels-module .listItem {
   display: inline-block;
   float: none; }
+
+#panels-module .mainImage {
+  width: 365px;
+  height: 287px; }

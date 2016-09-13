@@ -9,14 +9,17 @@ defined('_JEXEC') or die;
         <div class="row">
             <div class="col-md-5" style="padding-top: 20px;">
                 <div class="img_prod">
-                    <img src="<?php echo $defaultPanel->image; ?>" width="400">
+                    <img class="mainImage" src="<?php echo $defaultPanel->image; ?>" width="400">
                 </div>
             </div>
             <div class="col-md-7" style="padding-top: 20px;">
                 <!--WIDTH HEIGHT-->
                 <div class="row">
                     <div class="col-md-6">
-                        <p><span class="mod_text">Ширина, мм : </span><input type="text" class="mod_inp"><input type="button" value="?" class="mod_btn" data-toggle="modal" data-target=".modal-sw"></p>
+                        <p>
+                            <span class="mod_text">Ширина, мм : </span>
+                            <input type="number" class="mod_inp panelWidthParam"><input type="button" value="?" class="mod_btn" data-toggle="modal" data-target=".modal-sw">
+                        </p>
                     </div>
                     <div class="modal fade modal-sw" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
@@ -31,7 +34,10 @@ defined('_JEXEC') or die;
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <p><span class="mod_text">Высота, мм : </span><input type="text" class="mod_inp"><input type="button" value="?" class="mod_btn" data-toggle="modal" data-target=".modal-sh"></p>
+                        <p>
+                            <span class="mod_text">Высота, мм : </span>
+                            <input type="number" class="mod_inp panelHeightParam"><input type="button" value="?" class="mod_btn" data-toggle="modal" data-target=".modal-sh">
+                        </p>
                     </div>
                     <div class="modal fade modal-sh" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
@@ -53,9 +59,11 @@ defined('_JEXEC') or die;
                     <div class="col-md-12">
                         <p>
                                 <!-- Panel -->
-                            <select class="mod_sel">
+                            <select class="mod_sel selectPanel">
                                 <?php foreach($panelList as $item): ?>
-                                    <option value="<?php echo $item->id; ?>"
+                                    <option value="<?php echo $item->id; ?>" data-image="<?php echo $item->image; ?>"
+                                            data-price="<?php echo $item->price; ?>"
+                                            data-automation_price="<?php echo $item->automationPrice; ?>"
                                         <?php echo $item->id == $paramsData['defaultPanel'] ? 'selected' : ''; ?>>
                                         <?php echo $item->name; ?>
                                     </option>
@@ -89,9 +97,12 @@ defined('_JEXEC') or die;
                     </div>
                     <div class="col-md-12">
                         <p>
-                            <select class="mod_sel">
+                            <select class="mod_sel selectColor">
+                                <option value="-1" selected>Выберите цвет</option>
                                 <?php foreach($panelStylesList as $item): ?>
-                                    <option value="<?php echo $item->id; ?>">
+                                    <option value="<?php echo $item->id; ?>" data-image="<?php echo $item->image; ?>"
+                                        data-price="<?php echo $item->price; ?>" class="panelStyle"
+                                    >
                                         <?php echo $item->color; ?>
                                     </option>
                                 <?php endforeach; ?>
@@ -106,9 +117,9 @@ defined('_JEXEC') or die;
                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                         <h4 class="modal-title" id="myModalLabel">Цвет</h4>
                                     </div>
-                                    <div class="modal-body">
+                                    <div class="modal-body selectColor-viewBox">
                                         <?php foreach($panelStylesList as $item): ?>
-                                            <div class="row col-md-6 listItem" style="margin-top: 20px;">
+                                            <div class="row col-md-6 listItem panelStyle" style="margin-top: 20px;">
                                                 <div class="">
                                                     <img src="<?php echo $item->image; ?>" width="80">
                                                     <p>
@@ -124,7 +135,8 @@ defined('_JEXEC') or die;
                     </div>
                     <div class="col-md-12">
                         <div class="checkbox">
-                            <input type="checkbox" id="check"><label for="check" style="font-size: 16px;">Автоматика</label>
+                            <input type="checkbox" id="check"" class="automationToggle">
+                            <label for="check" style="font-size: 16px;">Автоматика</label>
                         </div>
                     </div>
                 </div>

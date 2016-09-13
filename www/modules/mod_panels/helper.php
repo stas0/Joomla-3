@@ -2,7 +2,9 @@
 
 defined('_JEXEC') or die;
 
-class HelperPanels{
+require_once JPATH_ADMINISTRATOR . '/components/com_panels/api/panels.php';
+
+class modPanelsHelper{
 	public static function getParams($module){
 		$db = JFactory::getDbo();
 		$query = $db->getQuery(true);
@@ -13,6 +15,16 @@ class HelperPanels{
 		$result = $db->loadResult();
 		
 		return json_decode($result);
+	}
+
+	public static function getAjax(){
+		$input = JFactory::getApplication()->input;
+		$panelID = $input->getInt('panelID');
+
+		$panels = new Panels();
+		$panelStylesList = $panels->getPanelStyles($panelID);
+
+		return $panelStylesList;
 	}
 }
 

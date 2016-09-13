@@ -25,6 +25,12 @@
 			description="Price per square meter"
 		/>
 		<field
+			name="automationPrice"
+			type="number"
+			label="Automation price"
+			description="Automation price"
+		/>
+		<field
 				name="publish"
 				type="radio"
 				default="0"
