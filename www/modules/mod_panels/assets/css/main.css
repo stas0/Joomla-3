@@ -33,6 +33,10 @@
     height: 14px;
     background-color: red; }
 
+#panels-module .radiobox input[type=radio] {
+  height: initial;
+  margin: 3px 5px 0px 25px; }
+
 #panels-module a.price {
   color: red;
   font-size: 20px;

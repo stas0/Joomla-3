@@ -6,7 +6,7 @@
 			'width': null,
 			'height': null,
 			'automationPrice': null,
-			'automationPriceEnable': false
+			'eur': null
 		}
 
 		/**
@@ -15,6 +15,7 @@
 		function init(){
 			setRTData('automationPrice', getAutomationPrice());
 			setRTData('panel', getPanelPrice());
+			setRTData('eur', $('#panels-module').data('eur'));
 
 			//  Throw change event
 			$(document).trigger('changeInputFiends');
@@ -38,7 +39,6 @@
 				//  Remove old panle colors
 				removePanelStyles();
 				//  Update automation price
-				setRTData('automationPrice', getAutomationPrice());
 				setRTData('panel', getPanelPrice());
 				setRTData('color', getPanelColorPrice());
 
@@ -97,10 +97,10 @@
 		/**
 		 * Update automation price toggle
 		 */
-		$('#panels-module .automationToggle').change(function(){
-			var val = $(this).is(':checked');
+		$('#panels-module .radiobox input[type="radio"]').change(function(){
+			var val = $(this).data('price');
 
-			setRTData('automationPriceEnable', val);
+			setRTData('automationPrice', val);
 
 			//  Throw change event
 			$(document).trigger('changeInputFiends');
@@ -119,28 +119,39 @@
 
 		 */
 		$(document).on('changeInputFiends', function(){
-			var price = 0;
-			console.log($('#panels-module .price')[0]);
-			console.log(currData);
-
 			if(getRTData('width') == null || getRTData('height') == null){
 				return;
 			}
+
+			var price = getTotalPrice();
+
+			$('#panels-module .price').text(price + "грн.");
+		});
+
+		//	Save pdf
+		$('#panels-module .mod_btn.save').click(function() {
+			createPdf();
+		});
+
+		function getTotalPrice() {
+			var price = 0;
+			console.log(currData);
 
 			var userSqueare = getRTData('width') * getRTData('height');
 
 			price += userSqueare*getRTData('panel');
 
+			console.log(getRTData('automationPrice'));
+			price += getRTData('automationPrice');
+
 			if(getRTData('color') != null){
 				price += userSqueare*getRTData('color');
 			}
 
-			if(getRTData('automationPriceEnable') == true){
-				price += getRTData('automationPrice');
-			}
+			price = getPrice(price);
 
-			$('#panels-module .price').text(price + "$");
-		});
+			return price;
+		}
 
 		/**
 		 * Create and return request object
@@ -152,6 +163,7 @@
 		 */
 		function getRequestObj(data){
 			return {
+				'do': 'getPanels',
 				'option': 'com_ajax', // Используем AJAX интерфейс
 				'module': 'panels', // Название модуля без mod_
 				'format': 'json', // Формат возвращаемых данных
@@ -178,11 +190,26 @@
 						return;
 					}
 
-					console.log(response);
-
 					callback(response);
 				}
 			});
+		}
+
+		function createPdf(){
+			var data = {
+				panelName: $('#panels-module .selectPanel option:selected').text().trim(),
+				colorName: $('#panels-module .selectColor option:selected').text().trim(),
+				width: getRTData('width'),
+				height: getRTData('height'),
+				price: getTotalPrice()
+			}
+
+			var str = jQuery.param( data );
+			console.log(encodeURI(str));
+
+			var url = 'http://'+ window.location.host +'/modules/mod_panels/craete_pdf.php?' + encodeURI(str);
+			var win = window.open(url, '_blank');
+			win.focus();
 		}
 
 		/**
@@ -258,9 +285,9 @@
 		 * @returns {*}
 		 */
 		function getAutomationPrice(){
-			var price = $('#panels-module .selectPanel option:selected');
+			var price = $('#panels-module .radiobox input[name="radiobutton"]:checked');
 			
-			return price.data('automation_price');
+			return price.data('price');
 		}
 
 		/**
@@ -284,7 +311,16 @@
 
 			return price.data('price');
 		}
-		
+
+		/**
+		 * Get UAN price
+		 * @param price
+		 * @returns {number}
+		 */
+		function getPrice(price) {
+			return price*getRTData('eur');
+		}
+
 		/**
 		 * Get runtime data
 		 *

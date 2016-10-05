@@ -24,11 +24,17 @@
 			label="Price"
 			description="Price per square meter"
 		/>
-		<field
+		<!--<field
 			name="automationPrice"
 			type="number"
 			label="Automation price"
 			description="Automation price"
+		/>-->
+		<field
+			name="discount"
+			type="number"
+			label="Discount %"
+			description="Discount %"
 		/>
 		<field
 				name="publish"

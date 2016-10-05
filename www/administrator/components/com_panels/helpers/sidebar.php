@@ -11,6 +11,10 @@
 				'Panel styles', 'index.php?option=com_panels&view=panel_styles_list',
 				($view == 'panel_styles')
 			);
+            JHtmlSidebar::addEntry(
+                'Panel automatic', 'index.php?option=com_panels&view=automatic_list',
+                ($view == 'automatic')
+            );
 		}
 	}
 ?>

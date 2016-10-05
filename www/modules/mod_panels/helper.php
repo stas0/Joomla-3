@@ -19,12 +19,21 @@ class modPanelsHelper{
 
 	public static function getAjax(){
 		$input = JFactory::getApplication()->input;
-		$panelID = $input->getInt('panelID');
+        $do = $input->getString('do');
 
-		$panels = new Panels();
-		$panelStylesList = $panels->getPanelStyles($panelID);
+        switch($do){
+            case 'getPanels':
+                $panelID = $input->getInt('panelID');
 
-		return $panelStylesList;
+                $panels = new Panels();
+                $panelStylesList = $panels->getPanelStyles($panelID);
+
+                return $panelStylesList;
+
+                break;
+            case 'createPdf':
+                break;
+        }
 	}
 }
 

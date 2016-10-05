@@ -76,5 +76,19 @@
 
             return $res;
         }
+
+        public function getAutomatics() {
+            $db = JFactory::getDbo();
+
+            $query = $db->getQuery(true);
+            $query->select('*');
+            $query->from('#__panels_automatic');
+
+            $db->setQuery($query);
+
+            $res = $db->loadObjectList();
+
+            return $res;
+        }
     }
 ?>

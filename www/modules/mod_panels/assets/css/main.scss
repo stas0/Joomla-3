@@ -41,6 +41,11 @@
         }
     }
 
+    .radiobox input[type=radio] {
+        height: initial;
+        margin: 3px 5px 0px 25px;
+    }
+
     a.price {
         color: red;
         font-size: 20px;

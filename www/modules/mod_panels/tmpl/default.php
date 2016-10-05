@@ -3,7 +3,7 @@
 defined('_JEXEC') or die;
 
 ?>
-<div id="panels-module">
+<div id="panels-module" data-eur="<?php echo $eur; ?>">
     <div class="container">
         <h3 style="border-bottom: 2px solid red;">Секционные ворота</h3>
         <div class="row">
@@ -133,10 +133,20 @@ defined('_JEXEC') or die;
                             </div>
                         </div>
                     </div>
+                    <hr class="col-md-12" style="border-top: 1px solid #dddddd;">
                     <div class="col-md-12">
                         <div class="checkbox">
-                            <input type="checkbox" id="check"" class="automationToggle">
-                            <label for="check" style="font-size: 16px;">Автоматика</label>
+                            <!--<input type="checkbox" id="check"" class="automationToggle">-->
+                            <h4 style="font-weight: 600;">Автоматика:</h4>
+                            <div class="radiobox">
+                                <?php $first = false; ?>
+                                <?php foreach($panelAutomatics as $item): ?>
+                                    <input type="radio" name="radiobutton" data-price="<?php echo $item->price; ?>"
+                                           value="<?php echo $item->id; ?>" <?php echo !$first ? 'checked' : ''; ?>>
+                                    <?php echo $item->name; ?>
+                                    <?php $first = true;?>
+                                <?php endforeach; ?>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -145,7 +155,7 @@ defined('_JEXEC') or die;
                 <!--PRICE-->
                 <div class="row" style="margin-bottom: 20px;">
                     <div class="col-md-12">
-                        <span class="mod_text">Цена: </span><a href="#" class="price">1000$</a><input type="button" value="Сохранить" class="mod_btn save">
+                        <span class="mod_text">Цена: </span><a href="#" class="price">1000грн.</a><input type="button" value="Сохранить" class="mod_btn save">
                     </div>
                 </div>
                 <!--END PRICE-->
